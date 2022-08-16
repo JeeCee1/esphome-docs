@@ -31,9 +31,10 @@ rarely be necessary, as the SPI bus can be shared by the devices).
 
     # Example configuration entry
     spi:
-      clk_pin: GPIO14
-      mosi_pin: GPIO13
-      miso_pin: GPIO12
+      - id: bus1
+        clk_pin: GPIO14
+        mosi_pin: GPIO13
+        miso_pin: GPIO12
 
 Configuration variables:
 ------------------------
@@ -42,6 +43,12 @@ Configuration variables:
 - **mosi_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The pin used for the MOSI line of the SPI bus.
 - **miso_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The pin used for the MISO line of the SPI bus.
 - **id** (*Optional*, :ref:`config-id`): Manually specify the ID for this SPI hub if you need multiple SPI hubs.
+
+When using multiple SPI busses, an individual bus can be selected as follows:
+
+.. code-block:: yaml
+
+    spi_id: bus1
 
 See Also
 --------
