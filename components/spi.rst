@@ -43,6 +43,8 @@ Configuration variables:
 - **miso_pin** (*Optional*, :ref:`Pin Schema <config-pin_schema>`): The pin used for the MISO line of the SPI bus.
 - **id** (*Optional*, :ref:`config-id`): Manually specify the ID for this SPI hub if you need multiple SPI hubs.
 
+When using multiple SPI busses, a bus can be selected through its ID by using '''spi_id'''.
+
 See Also
 --------
 
